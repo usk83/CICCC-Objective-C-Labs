@@ -24,7 +24,16 @@ int main(int argc, const char * argv[]) {
       NSString *strInput = getUserInput(255, @"\nEnter your String: ('q' to quit)");
       if ([strInput isEqualToString: @"q"]) { break; }
       while (YES) {
-        NSString *option = getUserInput(10, @"\nChoose one of the following options:\n1. Uppercase\n2. Lowercase\n3. Numberize\n4. Canadianize\n5. Respond\n6. De-Space-It\n7. Word Count\n8. Remove punctuations\n9. Done\n");
+        NSString *option = getUserInput(10, @"\nChoose one of the following options:"
+                                             "\n1. Uppercase"
+                                             "\n2. Lowercase"
+                                             "\n3. Numberize"
+                                             "\n4. Canadianize"
+                                             "\n5. Respond"
+                                             "\n6. De-Space-It"
+                                             "\n7. Word Count"
+                                             "\n8. Remove punctuations"
+                                             "\n9. Done");
 
         if ([option isEqualToString: @"1"]) {
           NSLog(@"%@", [strInput uppercaseString]);
