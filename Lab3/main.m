@@ -5,6 +5,7 @@
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
+    NSLog(@"MATHS!\n\n");
     NSNumberFormatter *formatter = [NSNumberFormatter new];
     ScoreKeeper *scoreKeeper = [ScoreKeeper new];
     while (YES) {
