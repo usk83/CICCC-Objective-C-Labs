@@ -2,7 +2,7 @@
 
 @implementation ScoreKeeper
 
-- (NSString *)description {
+- (NSString *) description {
   return [NSString stringWithFormat:@"score: %ld right, %ld wrong ---- %.0f%%",
     self.right,
     self.wrong,

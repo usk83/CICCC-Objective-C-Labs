@@ -2,7 +2,7 @@
 
 @implementation AdditionQuestion
 
-- (instancetype) init{
+- (instancetype) init {
   if (self = [super init]) {
     NSInteger left = arc4random_uniform(91) + 10;
     NSInteger right = arc4random_uniform(91) + 10;
