@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdditionQuestion : Question
+@interface DivisionQuestion : Question
 
 @end
 
