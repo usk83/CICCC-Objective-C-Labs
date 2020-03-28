@@ -1,3 +1,4 @@
+#import "Question.h"
 #import "DivisionQuestion.h"
 
 @implementation DivisionQuestion

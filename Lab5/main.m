@@ -9,10 +9,10 @@ int main(int argc, const char * argv[]) {
   @autoreleasepool {
     NSString *right = @"Right!\n";
     NSString *wrong = @"Wrong!\n";
-    NSNumberFormatter *formatter = [NSNumberFormatter new];
-    ScoreKeeper *scoreKeeper = [ScoreKeeper new];
-    QuestionManager *questionManager = [QuestionManager new];
     QuestionFactory *questionFactory = [QuestionFactory new];
+    QuestionManager *questionManager = [QuestionManager new];
+    ScoreKeeper *scoreKeeper = [ScoreKeeper new];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
 
     NSLog(@"MATHS!\n\n");
     while (YES) {
@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
         break;
       }
       NSNumber *answerNumber = [formatter numberFromString: answerString];
-      NSInteger answer = q.answer;
+      NSInteger answer = q.answer; // need to call this getter to set endTime anyway
       if (answerNumber != nil && [answerNumber integerValue] == answer) {
         NSLog(@"%@", right);
         scoreKeeper.right++;

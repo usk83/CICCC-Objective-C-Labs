@@ -1,7 +1,5 @@
 #import "QuestionFactory.h"
 
-@class Question;
-
 @implementation QuestionFactory
 
 - (instancetype) init {

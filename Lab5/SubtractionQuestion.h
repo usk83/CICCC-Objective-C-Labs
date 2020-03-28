@@ -1,4 +1,6 @@
-#import "Question.h"
+#import <Foundation/Foundation.h>
+
+@class Question;
 
 NS_ASSUME_NONNULL_BEGIN
 
