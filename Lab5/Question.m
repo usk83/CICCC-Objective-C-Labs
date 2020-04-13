@@ -15,7 +15,7 @@
 - (void) generateQuestion {}
 
 - (NSTimeInterval) answerTime {
-  return roundf([self.endTime timeIntervalSinceDate: self.startTime]);
+  return [self.endTime timeIntervalSinceDate: self.startTime];
 }
 
 // overriding getter

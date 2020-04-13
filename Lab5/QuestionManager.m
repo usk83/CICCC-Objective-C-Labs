@@ -12,8 +12,8 @@
 - (NSString *) timeOutput {
   NSTimeInterval totalTime = [[self.questions valueForKeyPath: @"@sum.answerTime"] doubleValue];
   return [NSString stringWithFormat: @"total time: %.0fs, average time: %.0fs",
-    totalTime,
-    totalTime / [self.questions count]
+    roundf(totalTime),
+    roundf(totalTime / [self.questions count])
   ];
 }
 
