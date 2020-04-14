@@ -20,8 +20,21 @@
   }
 }
 
+- (void) holdDie: (NSInteger) index {
+  [self.heldDice addObject: [NSNumber numberWithInt: index]];
+}
+
 - (NSString *) diceString {
-  return [self.dice componentsJoinedByString: @"  "];
+  NSUInteger diceCount = [self.dice count];
+  NSMutableString *str = [NSMutableString stringWithCapacity: diceCount * 3 + [self.heldDice count] * 2];
+  for (int i = 0; i < diceCount ; i++) {
+    if ([self.heldDice containsObject: [NSNumber numberWithInt: i]]) {
+      [str appendFormat: @"[%@]  ", self.dice[i]];
+    } else {
+      [str appendFormat: @"%@  ", self.dice[i]];
+    }
+  }
+  return [str copy];
 }
 
 @end
