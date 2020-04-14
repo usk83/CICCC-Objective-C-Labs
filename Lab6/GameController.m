@@ -3,7 +3,7 @@
 
 @implementation GameController
 
-- (instancetype) initWithNumberOfDice: (int) numberOfDice {
+- (instancetype) initWithNumberOfDice: (NSInteger) numberOfDice {
   if (self = [super init]) {
     _dice = [NSMutableArray arrayWithCapacity: numberOfDice];
     _heldDice = [NSMutableSet setWithCapacity: numberOfDice];

@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString *diceString;
 @property (nonatomic, assign, readonly) NSInteger score;
 
-- (instancetype) initWithNumberOfDice: (int) numberOfDice;
+- (instancetype) initWithNumberOfDice: (NSInteger) numberOfDice;
 - (void) roll;
 - (void) holdDie: (NSInteger) index;
 - (void) resetDice;
