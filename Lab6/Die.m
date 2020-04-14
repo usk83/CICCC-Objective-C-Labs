@@ -2,7 +2,7 @@
 
 @implementation Die
 
-static NSArray * labels;
+static NSArray *labels;
 
 + (void) initialize {
   if (self == [Die class]) {
@@ -19,6 +19,12 @@ static NSArray * labels;
 
 - (void) roll {
   _pip = arc4random_uniform(6) + 1;
+}
+
+- (void) setPip: (NSInteger) p {
+  if (1 <= p && p <= 6) {
+    _pip = p;
+  }
 }
 
 - (NSString *) description {

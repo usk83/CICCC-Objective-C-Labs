@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Die : NSObject
 
-@property (nonatomic, assign, readonly) NSInteger pip;
+@property (nonatomic, assign) NSInteger pip;
 
 - (void) roll;
 
