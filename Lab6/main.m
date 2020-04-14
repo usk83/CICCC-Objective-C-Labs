@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "Die.h"
+#import "GameController.h"
 
 static const int numberOfDice = 5;
 
@@ -16,19 +16,14 @@ NSString *getUserInput() {
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
     NSLog(@"=== Threelow ===");
-    NSMutableArray *dice = [NSMutableArray arrayWithCapacity: numberOfDice];
-    for (int i = numberOfDice; i > 0; i--) {
-      [dice addObject: [Die new]];
-    }
+    GameController *cntlr = [[GameController alloc] initWithNumberOfDice: numberOfDice];
     while (YES) {
       NSLog(@"\n'roll' to roll the dice");
       NSString *input = getUserInput();
       if ([input isEqualToString: @"roll"]) {
-        for (Die *die in dice) {
-          [die roll];
-        }
+        [cntlr roll];
       }
-      NSLog(@"%@", [dice componentsJoinedByString: @"  "]);
+      NSLog(@"%@", cntlr.diceString);
     }
   }
   return 0;
