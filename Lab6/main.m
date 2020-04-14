@@ -36,6 +36,7 @@ int main(int argc, const char * argv[]) {
         [cntlr resetDice];
       }
       NSLog(@"%@", cntlr.diceString);
+      NSLog(@"score :%ld", cntlr.score);
     }
   }
   return 0;

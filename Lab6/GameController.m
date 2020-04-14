@@ -46,4 +46,12 @@
   return [str copy];
 }
 
+- (NSInteger) score {
+  NSInteger s = 0;
+  for(NSNumber *heldDie in self.heldDice) {
+    s += ((Die *)self.dice[[heldDie integerValue]]).pip;
+  }
+  return s;
+}
+
 @end

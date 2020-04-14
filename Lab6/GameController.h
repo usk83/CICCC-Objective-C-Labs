@@ -7,6 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray *dice;
 @property (nonatomic, strong) NSMutableSet *heldDice;
 @property (nonatomic, strong, readonly) NSString *diceString;
+@property (nonatomic, assign, readonly) NSInteger score;
 
 - (instancetype) initWithNumberOfDice: (int) numberOfDice;
 - (void) roll;
