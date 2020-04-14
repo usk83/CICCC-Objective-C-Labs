@@ -2,10 +2,12 @@
 #import "GameController.h"
 
 static const int numberOfDice = 5;
+static const int inputBufferSize = 255;
 
-NSString *getUserInput() {
-  char inputChars[255];
-  char *result = fgets(inputChars, 255, stdin);
+NSString *getUserInput(NSString *prompt) {
+  NSLog(@"%@ ", prompt);
+  char inputChars[inputBufferSize];
+  char *result = fgets(inputChars, inputBufferSize, stdin);
   if (result == NULL) {
     return NULL;
   }
@@ -18,8 +20,8 @@ int main(int argc, const char * argv[]) {
     NSLog(@"=== Threelow ===");
     GameController *cntlr = [[GameController alloc] initWithNumberOfDice: numberOfDice];
     while (YES) {
-      NSLog(@"\n'roll' to roll the dice");
-      NSString *input = getUserInput();
+      NSString *input = getUserInput(@"\n'roll' to roll the dice"
+                                      "\n'hold' to hold a dice");
       if ([input isEqualToString: @"roll"]) {
         [cntlr roll];
       }
