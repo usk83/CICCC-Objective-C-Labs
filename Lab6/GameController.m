@@ -21,7 +21,12 @@
 }
 
 - (void) holdDie: (NSInteger) index {
-  [self.heldDice addObject: [NSNumber numberWithInt: index]];
+  NSNumber *indexNumber = [NSNumber numberWithInt: index];
+  if ([self.heldDice containsObject: indexNumber]) {
+    [self.heldDice removeObject: indexNumber];
+  } else {
+    [self.heldDice addObject: indexNumber];
+  }
 }
 
 - (NSString *) diceString {
