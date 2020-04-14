@@ -29,6 +29,10 @@
   }
 }
 
+- (void) resetDice {
+  [self.heldDice removeAllObjects];
+}
+
 - (NSString *) diceString {
   NSUInteger diceCount = [self.dice count];
   NSMutableString *str = [NSMutableString stringWithCapacity: diceCount * 3 + [self.heldDice count] * 2];

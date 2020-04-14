@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype) initWithNumberOfDice: (int) numberOfDice;
 - (void) roll;
 - (void) holdDie: (NSInteger) index;
+- (void) resetDice;
 
 @end
 

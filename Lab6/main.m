@@ -22,7 +22,8 @@ int main(int argc, const char * argv[]) {
     NSNumberFormatter *formatter = [NSNumberFormatter new];
     while (YES) {
       NSString *input = getUserInput(@"\n'roll' to roll the dice"
-                                      "\n'hold' to hold a dice");
+                                      "\n'hold' to hold a dice"
+                                      "\n'reset' to un-hold all dice");
       if ([input isEqualToString: @"roll"]) {
         [cntlr roll];
       } else if ([input isEqualToString: @"hold"]) {
@@ -31,6 +32,8 @@ int main(int argc, const char * argv[]) {
         if (number != nil) {
           [cntlr holdDie: [number integerValue]];
         }
+      } else if ([input isEqualToString: @"reset"]) {
+        [cntlr resetDice];
       }
       NSLog(@"%@", cntlr.diceString);
     }
