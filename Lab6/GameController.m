@@ -1,6 +1,13 @@
 #import "GameController.h"
 #import "Die.h"
 
+@interface GameController()
+
+@property (nonatomic, strong) NSMutableArray *dice;
+@property (nonatomic, strong) NSMutableSet *heldDice;
+
+@end
+
 @implementation GameController
 
 - (instancetype) initWithNumberOfDice: (NSInteger) numberOfDice {

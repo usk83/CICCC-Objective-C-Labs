@@ -18,7 +18,7 @@ static NSArray * labels;
 }
 
 - (void) roll {
-  self.pip = arc4random_uniform(6) + 1;
+  _pip = arc4random_uniform(6) + 1;
 }
 
 - (NSString *) description {
